@@ -1,5 +1,19 @@
+---
+allowed-tools: Bash(git add:*), Bash(git status:*), Bash(git commit:*)
+description: Create a git commit
+---
+
+# Context
+
+- Current git status: !`git status`
+- Current git diff (staged and unstaged changes): !`git diff HEAD`
+- Current branch: !`git branch --show-current`
+- Recent commits: !`git log --oneline -10`
+
 # Commit Code
 
-Examine les fichiers qui ont changés et créé un commit avec un message de commit qui résume les changements. Essaie toujours de faire un message court et concis qui exprime bien la logique métier.
+Examine the files that have changed and create a commit with a commit message that summarizes the changes. Always try to write a short and concise message that clearly expresses the business logic.
 
-Utilise les conseils de l'utilisateur pour le sujet principal du message $arguments
+# Commit message
+
+The commit message must start with a gitmoji followed by '$1($2-$3): '
